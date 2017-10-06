@@ -1,9 +1,9 @@
 // process.env.NODE_URL = 'XXX.XXX.XXX.XXX'; // defaults to '127.0.0.1' or 'localhost'
 // process.env.NODE_PORT = 6085;  // defaults to 6085
-
+process.env.MONGODB_URI = 'mongodb://<db-user>:<password>@<>.mlab.com:13505/<>';
 require('mahrio').runServer( process.env, __dirname )
   .then( function(server){
-    
+
     // Define User Interface through a Web View
     server.route({
       method: 'GET',
@@ -12,19 +12,6 @@ require('mahrio').runServer( process.env, __dirname )
         reply.view( 'index' );
       }
     });
-    
-    // Define an API endpoint
-    server.route({
-      method: 'POST',
-      path: '/api/monitor/:val',
-      handler: function( request, reply ) {
-        console.log( 'REQUEST.PARAMS: ' );
-	console.log( request.params );
-        console.log( 'REQUEST.QUERY: ' );
-        console.log( request.query );
-        console.log( 'REQUEST.PAYLOAD: ' );
-	console.log( request.payload );
-        reply('OK');
-      }
-    });
+
+    require('./routes')( server );
   });
