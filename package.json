@@ -1,0 +1,11 @@
+{
+  "name": "simple-server",
+  "version": "0.0.1",
+  "description": "Simple server",
+  "main": "server/index.js",
+  "dependencies": {
+    "mahrio": "https://github.com/JRGEMCP/MAHRIO.git#master"
+  },
+  "author": "Jesus Rocha <jesus.rocha@whichdegree.co>",
+  "license": "ISC"
+}
