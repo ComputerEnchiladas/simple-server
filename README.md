@@ -6,18 +6,23 @@
 
 `npm -v` >= 3.3.10
 
-## Clone Repo
+## Setup
+### Clone Repo
 
 `git clone https://github.com/ComputerEnchiladas/simple-server.git`
 
-## Install Dependencies
+### Install Dependencies
 
 `npm install`
 
-## Run Server
+### Run Server
 
 `node server/index`
 
-## Browser Preview
+### Browser Preview
 
 Open browser and go to http://127.0.0.1:6085 or custom IP:PORT
+
+## Testing
+* [Postman](https://www.getpostman.com/)
+* Chrome Browser
