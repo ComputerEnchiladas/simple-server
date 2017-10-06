@@ -19,11 +19,11 @@ require('mahrio').runServer( process.env, __dirname )
       path: '/api/monitor/:val',
       handler: function( request, reply ) {
         console.log( 'REQUEST.PARAMS: ' );
-	      console.log( request.params );
+	console.log( request.params );
         console.log( 'REQUEST.QUERY: ' );
         console.log( request.query );
         console.log( 'REQUEST.PAYLOAD: ' );
-	      console.log( request.payload );
+	console.log( request.payload );
         reply('OK');
       }
     });
