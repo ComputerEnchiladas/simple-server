@@ -18,8 +18,12 @@ require('mahrio').runServer( process.env, __dirname )
       method: 'POST',
       path: '/api/monitor/:val',
       handler: function( request, reply ) {
-        console.log( request.params );
-        console.log( request.queryParams );
+        console.log( 'REQUEST.PARAMS: ' );
+	      console.log( request.params );
+        console.log( 'REQUEST.QUERY: ' );
+        console.log( request.query );
+        console.log( 'REQUEST.PAYLOAD: ' );
+	      console.log( request.payload );
         reply('OK');
       }
     });
